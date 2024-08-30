@@ -1,0 +1,227 @@
+
+@font-face{
+font-family: font2;
+src:url(fonts/font2.ttf)
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+html,body{
+    height: 100vh;
+    width: 100%;
+}
+
+/* loader code css start*/
+
+#lod{
+    min-height: 100vh;
+    width: 100%;   
+}
+
+.loader{
+    height: 100vh;
+    width: 100%; 
+    position: absolute;
+    background-color: orangered;
+    animation: puls 3s;
+    z-index: 99;
+}
+
+.zoom{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(-7deg);
+    font-size: 15vw;
+    font-family: font1;
+    -webkit-text-stroke-width: 0.2vh;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #fff;
+    outline: none;
+}
+
+.loader h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(-7deg);
+    font-family: font1;
+    color: #fff;
+    font-size: 5vw;
+    padding-top: 6%;
+}
+
+.loading{
+  position: relative;
+  left: 50%;
+  width: 50%;
+  bottom: -65%;
+  height: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: translate(-50%,-50%)rotate(-7deg);
+  background-color: #fff;
+  display: inline-block;
+}
+
+.loading::after{
+content: "";
+position: absolute;
+bottom: 10%;
+height: 100%;
+border-radius: 4px;
+animation: load 3s;
+}
+
+@keyframes load {
+    0%{
+        width: 0;
+        background-color: indianred;
+    }
+    25%{
+        width: 25%;
+        background-color: greenyellow;
+    }
+    50%{
+        width: 50%;
+        background-color: chartreuse;
+    }
+    75%{
+        width: 75%;
+        background-color: aquamarine;
+
+    }
+    100%{
+        width: 100%;
+        background-color: gold;
+    }
+}
+@keyframes puls {
+    0%{
+        
+        background-color: indianred;
+    }
+    25%{
+        
+        background-color: greenyellow;
+    }
+    50%{
+       
+        background-color: chartreuse;
+    }
+    75%{
+        
+        background-color: aquamarine;
+    }
+    100%{
+       
+        background-color: gold;
+    }
+}
+
+/* loader code css end */
+
+/* nave code css is  started*/
+
+section{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('images/dark\ background.jpg');
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+section .scroll{
+    width: 100%;
+    display: flex;   
+}
+
+section .scroll div{
+    color: #000;
+    font-size: 4em;
+    background: #fff;
+    white-space: nowrap;
+    font-weight: 900;
+    text-transform: uppercase;
+    animation: animate 40s linear infinite;  
+}
+
+section .scroll div:nth-child(2){
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+
+section .scroll div span{
+   -webkit-text-stroke: 2px #000;
+    color: transparent;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2
+{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+section .scroll.text1{
+    transform: rotate(30deg)translateY(200px) translateX(-100px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+section .scroll.text2{
+    transform: rotate(-35deg)translateY(100px) translateX(-100px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+section .scroll.text3{
+    transform: rotate(30deg)translateY(250px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+section .scroll.text4{
+    transform: rotate(-5deg)translateY(-150px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+section .scroll.text5{
+    transform: rotate(5deg)translateY(150px) translateX(-200px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+.explore{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5%;
+    left: 45.50%;
+    width: 9vw;
+    height: 9vh;
+    color: #faf8f8;
+    border-radius: 20px;
+    backdrop-filter: blur(4px); 
+    font-size: 0.7vw;
+    cursor: pointer;
+}
+
+.explore:hover h1{
+    color: red;
+}
