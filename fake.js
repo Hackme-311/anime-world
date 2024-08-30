@@ -274,5 +274,5 @@ var tl2 = gsap.timeline({scrollTrigger:{
   });
   
   function example(){
-      window.location.href = "index.html";
+      window.location.href = "home.html";
   }
